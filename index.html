@@ -3,45 +3,68 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>横排分类与链接</title>
+    <title>分类网址链接</title>
     <style>
-        /* 设置ul为水平列表 */
-        .horizontal-list {
+        /* 样式化分类标题 */
+        .category-title {
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        /* 样式化横排链接 */
+        .horizontal-links {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+
+        .horizontal-links a {
+            text-decoration: none;
+            padding: 5px;
+            border: 1px solid #ccc;
+            margin-right: 10px;
+        }
+
+        /* 最后一个链接不需要右边距 */
+        .horizontal-links a:last-child {
+            margin-right: 0;
+        }
+
+        /* 样式化竖排链接 */
+        .vertical-links {
             list-style-type: none;
             padding: 0;
-            margin: 0;
-            display: flex;
         }
 
-        /* 设置li为行内块元素，并设置间距 */
-        .horizontal-list li {
-            display: inline-block;
-            margin-right: 10px; /* 根据需要调整间距 */
+        .vertical-links li {
+            margin-bottom: 10px;
         }
 
-        /* 链接样式 */
-        .horizontal-list a {
-            text-decoration: none; /* 去除下划线 */
-            padding: 5px;
-            border: 1px solid #ccc; /* 可选：添加边框 */
-        }
-
-        /* 最后一个li的样式 */
-        .horizontal-list li:last-child {
-            margin-right: 0; /* 最后一个元素不需要右边距 */
+        .vertical-links a {
+            text-decoration: none;
         }
     </style>
 </head>
 <body>
 
-<h1>横排分类与链接</h1>
+<h1>分类网址链接</h1>
 
-<!-- 创建水平分类列表 -->
-<ul class="horizontal-list">
-    <li><a href="https://www.example1.com">分类1</a></li>
-    <li><a href="https://www.example2.com">分类2</a></li>
-    <li><a href="https://www.example3.com">分类3</a></li>
-    <!-- 可以继续添加更多分类 -->
+<h2 class="category-title">分类1</h2>
+
+<!-- 横排链接 -->
+<div class="horizontal-links">
+    <a href="https://www.example1.com">链接1</a>
+    <a href="https://www.example2.com">链接2</a>
+    <a href="https://www.example3.com">链接3</a>
+</div>
+
+<h2 class="category-title">分类2</h2>
+
+<!-- 竖排链接 -->
+<ul class="vertical-links">
+    <li><a href="https://www.example4.com">链接4</a></li>
+    <li><a href="https://www.example5.com">链接5</a></li>
+    <li><a href="https://www.example6.com">链接6</a></li>
 </ul>
 
 </body>
