@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -60,46 +60,33 @@
             text-align: center;
             margin-top: 20px;
         }
-    </style>
-     <style>
-        /* 样式化分类标题 */
-        .category-title {
-            font-weight: bold;
-            margin-bottom: 10px;
-        }
+    /* 容器样式，用于包裹链接 */
+    .links-container {
+        display: flex;
+        justify-content: flex-start; /* 水平对齐方式 */
+        align-items: center; /* 垂直对齐方式 */
+    }
 
-        /* 样式化横排链接 */
-        .horizontal-links {
-            display: flex;
-            justify-content: space-between;
-            margin-bottom: 20px;
-        }
+    /* 链接样式 */
+    .link {
+        margin-right: 100px; /* 右侧外边距，用于分隔链接 */
+        padding: 5px;
+        text-decoration: none; /* 移除下划线 */
+        border-bottom: 1px solid transparent; /* 可选：为链接添加下划线效果 */
+        transition: border-bottom-color 0.3s; /* 可选：添加下划线颜色变化的过渡效果 */
+    }
 
-        .horizontal-links a {
-            text-decoration: none;
-            padding: 5px;
-            border: 1px solid #ccc;
-            margin-right: 10px;
-        }
+    /* 鼠标悬停时的链接样式 */
+    .link:hover {
+        border-bottom-color: black; /* 鼠标悬停时显示黑色下划线 */
+    }
 
-        /* 最后一个链接不需要右边距 */
-        .horizontal-links a:last-child {
-            margin-right: 0;
-        }
+    /* 最后一个链接不需要右边距 */
+    .link:last-child {
+        margin-right: 0;
+    }
 
-        /* 样式化竖排链接 */
-        .vertical-links {
-            list-style-type: none;
-            padding: 0;
-        }
 
-        .vertical-links li {
-            margin-bottom: 10px;
-        }
-
-        .vertical-links a {
-            text-decoration: none;
-        }
     </style>
 </head>
 <body>
@@ -109,42 +96,43 @@
     <div class="additional-content">            
             <code>
             <form action="https://www.baidu.com/" method="get">
-                <input type="text" name="q" placeholder="搜索...">
-                <input type="submit" value="搜索">
+                <input type="text" name="q" placeholder="百度一下...">
+                <input type="submit" value="百度搜索">
             </form>
             </code>
         </div>  
-</nav>
-    <div class="additional-content">            
+  
+        <div class="additional-content">            
             <h2>免费仓库</h2>
-            <code>
-    <a href="https://github.com/">github</a><br>
-    <a href="https://gitee.com/">gitee</a><br>
-    <a href="https://gitcode.net/">gitcode</a><br>
-    <a href="https://notabug.org/">notabug</a><br>
-    <a href="https://gitea.com/">gitea</a><br>
-            </code>
-        </div>    
+<ul class="horizontal-links">
+<a href="https://github.com/" target="_blank">github.com</a>
+<a href="https://gitee.com/" target="_blank">gitee.com</a>
+<a href="https://gitcode.net/" target="_blank">gitcode.net</a>
+<a href="https://notabug.org/" target="_blank">notabug.org</a>
+<a href="https://gitea.com/" target="_blank">gitea.com</a>
+
+ </ul>
+        </div>
         <div class="additional-content">            
             <h2>在线接口</h2>
-            <code>
-饭太硬: <a href="http://饭太硬.top/tv" target="_blank">接口</a><br>
-小胡: <a href="https://huhuys.top/xiaohu" target="_blank">接口</a><br>
-小米: <a href="http://xhww.fun/小米/DEMO.json" target="_blank">接口</a><br>
-肥猫: <a href="http://肥猫.live" target="_blank">接口</a><br>
-星辰: <a href="http://8.210.232.168/xc.json" target="_blank">接口</a><br>
-白嫖: <a href="http://bp.tvbox.cam/" target="_blank">接口</a><br>
-            </code>
+<ul class="horizontal-links">
+饭太硬: <a href="http://饭太硬.top/tv" target="_blank">接口</a>
+小胡: <a href="https://huhuys.top/xiaohu" target="_blank">接口</a>
+小米: <a href="http://xhww.fun/小米/DEMO.json" target="_blank">接口</a>
+肥猫: <a href="http://肥猫.live" target="_blank">接口</a>
+星辰: <a href="http://8.210.232.168/xc.json" target="_blank">接口</a>
+白嫖: <a href="http://bp.tvbox.cam/" target="_blank">接口</a>
+ </ul>
         </div>
         <div class="additional-content">
             <h2>导航</h2>
-            <code>
-影视仓库: <a href="http://www.wmdz.com/index.html" target="_blank">导航</a><br>
-饭2: <a href="http://饭太硬.top/tv" target="_blank">接口</a><br>
-米的: <a href="http://xhww.fun/小米/DEMO.json" target="_blank">接口</a><br>
-猫的: <a href="http://肥猫.live" target="_blank">接口</a><br>
-白的: <a href="http://bp.tvbox.cam/" target="_blank">接口</a><br>
-            </code>
+<ul class="horizontal-links">
+  <a href="http://www.wmdz.com/index.html" target="_blank">影视仓库</a>
+  <a href="http://饭太硬.top/tv" target="_blank">饭2</a>
+  <a href="http://xhww.fun/小米/DEMO.json" target="_blank">米的</a>
+  <a href="http://肥猫.live" target="_blank">猫的</a>
+  <a href="http://bp.tvbox.cam/" target="_blank">白的</a>
+ </ul>
         </div>
     </div>
     <div class="copyright">© 2024 Powered by 行人</div>
