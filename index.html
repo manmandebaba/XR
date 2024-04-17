@@ -3,117 +3,110 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>分类网址链接</title>
+    <title>行人</title>
     <style>
-        /* 样式化分类标题 */
-        .category-title {
-            font-weight: bold;
-            margin-bottom: 10px;
-        }
-
-        /* 样式化横排链接 */
-        .horizontal-links {
-            display: flex;
-            justify-content: space-between;
-            margin-bottom: 20px;
-        }
-
-        .horizontal-links a {
-            text-decoration: none;
-            padding: 5px;
-            border: 1px solid #ccc;
-            margin-right: 10px;
-        }
-
-        /* 最后一个链接不需要右边距 */
-        .horizontal-links a:last-child {
-            margin-right: 0;
-        }
-
-        /* 样式化竖排链接 */
-        .vertical-links {
-            list-style-type: none;
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #ffffff;
+            margin: 0;
             padding: 0;
         }
-
-        .vertical-links li {
-            margin-bottom: 10px;
+        .container {
+            width: 80%;
+            margin: auto;
+            text-align: center;
+            padding-top: 100px;
         }
-
-        .vertical-links a {
-            text-decoration: none;
+        h1 {
+            font-size: 48px;
+            font-weight: bold;
+            font-family: 'Comic Sans MS', cursive, sans-serif;
+            animation: fadeIn 4s forwards;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        @keyframes fadeIn {
+            from {
+                color: transparent;
+            }
+            to {
+                color: #000000;
+            }
+        }
+        .delay {
+            font-size: 16px;
+        }
+        .error {
+            color: red;
+        }
+        .additional-content {
+            text-align: left;
+            margin-top: 50px;
+            padding: 20px;
+            background-color: #f5f5f5;
+            border-radius: 10px;
+        }
+        .additional-content img {
+            width: 200px;
+            display: block;
+            margin: 20px auto;
+            border-radius: 5px;
+        }
+        .caption {
+            color: #888;
+            font-size: 14px;
+            margin-top: 2px;
+        }
+        .copyright {
+            text-align: center;
+            margin-top: 20px;
         }
     </style>
-    <style>
-    /* 设置容器样式 */
-    .container {
-        display: flex;
-        justify-content: space-between;
-        align-items: flex-start;
-        margin-bottom: 20px;
-    }
-
-    /* 设置分类透明框样式 */
-    .category-box {
-        background-color: rgba(255, 255, 255, 0.5); /* 透明白色背景 */
-        padding: 10px;
-        border-radius: 5px;
-        margin-bottom: 10px;
-    }
-
-    /* 设置横排链接样式 */
-    .horizontal-links {
-        display: flex;
-    }
-
-    .horizontal-links a {
-        margin-right: 10px;
-        text-decoration: none;
-        color: black; /* 链接文字颜色 */
-        padding: 5px;
-        border-radius: 3px;
-    }
-
-    /* 竖排链接样式 */
-    .vertical-links {
-        list-style-type: none;
-        padding: 0;
-    }
-
-    .vertical-links li {
-        margin-bottom: 5px;
-    }
-
-    .vertical-links a {
-        text-decoration: none;
-        color: black; /* 链接文字颜色 */
-        padding: 5px;
-        border-radius: 3px;
-        display: block; /* 使链接块级显示 */
-    }
-</style>
 </head>
 <body>
+    <div class="container">
+        <h1>Hello 你好</h1>
 
-<h1>分类网址链接</h1>
-
-<h2 class="category-title">分类1</h2>
-
-<!-- 横排链接 -->
-<div class="horizontal-links">
-    <a href="https://www.example1.com">链接1</a>
-    <a href="https://www.example2.com">链接2</a>
-    <a href="https://www.example3.com">链接3</a>
-</div>
-
-<h2 class="category-title">分类2</h2>
-
-<!-- 竖排链接 -->
-<ul class="vertical-links">
-    <li><a href="https://www.example4.com">链接4</a></li>
-    <li><a href="https://www.example5.com">链接5</a></li>
-    <li><a href="https://www.example6.com">链接6</a></li>
-</ul>
-
+    <div class="additional-content">            
+            <code>
+            <form action="https://www.baidu.com/" method="get">
+                <input type="text" name="q" placeholder="搜索...">
+                <input type="submit" value="搜索">
+            </form>
+            </code>
+        </div>  
+</nav>
+    <div class="additional-content">            
+            <h2>免费仓库</h2>
+            <code>
+    <a href="https://github.com/">github</a><br>
+    <a href="https://gitee.com/">gitee</a><br>
+    <a href="https://gitcode.net/">gitcode</a><br>
+    <a href="https://notabug.org/">notabug</a><br>
+    <a href="https://gitea.com/">gitea</a><br>
+            </code>
+        </div>    
+        <div class="additional-content">            
+            <h2>在线接口</h2>
+            <code>
+饭太硬: <a href="http://饭太硬.top/tv" target="_blank">接口</a><br>
+小胡: <a href="https://huhuys.top/xiaohu" target="_blank">接口</a><br>
+小米: <a href="http://xhww.fun/小米/DEMO.json" target="_blank">接口</a><br>
+肥猫: <a href="http://肥猫.live" target="_blank">接口</a><br>
+星辰: <a href="http://8.210.232.168/xc.json" target="_blank">接口</a><br>
+白嫖: <a href="http://bp.tvbox.cam/" target="_blank">接口</a><br>
+            </code>
+        </div>
+        <div class="additional-content">
+            <h2>导航</h2>
+            <code>
+影视仓库: <a href="http://www.wmdz.com/index.html" target="_blank">导航</a><br>
+饭2: <a href="http://饭太硬.top/tv" target="_blank">接口</a><br>
+米的: <a href="http://xhww.fun/小米/DEMO.json" target="_blank">接口</a><br>
+猫的: <a href="http://肥猫.live" target="_blank">接口</a><br>
+白的: <a href="http://bp.tvbox.cam/" target="_blank">接口</a><br>
+            </code>
+        </div>
+    </div>
+    <div class="copyright">© 2024 Powered by 行人</div>
 </body>
 </html>
