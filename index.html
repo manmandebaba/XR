@@ -3,59 +3,46 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>分类与链接</title>
+    <title>横排分类与链接</title>
+    <style>
+        /* 设置ul为水平列表 */
+        .horizontal-list {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+        }
+
+        /* 设置li为行内块元素，并设置间距 */
+        .horizontal-list li {
+            display: inline-block;
+            margin-right: 10px; /* 根据需要调整间距 */
+        }
+
+        /* 链接样式 */
+        .horizontal-list a {
+            text-decoration: none; /* 去除下划线 */
+            padding: 5px;
+            border: 1px solid #ccc; /* 可选：添加边框 */
+        }
+
+        /* 最后一个li的样式 */
+        .horizontal-list li:last-child {
+            margin-right: 0; /* 最后一个元素不需要右边距 */
+        }
+    </style>
 </head>
 <body>
 
-<header>
-    <h1>网站分类与链接</h1>
-</header>
+<h1>横排分类与链接</h1>
 
-<nav>
-    <ul>
-        <li><a href="#home">首页</a></li>
-        <li><a href="#category1">分类1</a></li>
-        <li><a href="#category2">分类2</a></li>
-        <li><a href="#category3">分类3</a></li>
-    </ul>
-</nav>
-
-<main>
-    <section id="home">
-        <h2>欢迎</h2>
-        <p>欢迎来到我的网站，这里有各种分类的链接供您选择。</p>
-    </section>
-
-    <section id="category1">
-        <h2>分类1</h2>
-        <ul>
-            <li><a href="https://www.example1.com">链接1</a></li>
-            <li><a href="https://www.example2.com">链接2</a></li>
-            <li><a href="https://www.example3.com">链接3</a></li>
-        </ul>
-    </section>
-
-    <section id="category2">
-        <h2>分类2</h2>
-        <ul>
-            <li><a href="https://www.example4.com">链接4</a></li>
-            <li><a href="https://www.example5.com">链接5</a></li>
-        </ul>
-    </section>
-
-    <section id="category3">
-        <h2>分类3</h2>
-        <ul>
-            <li><a href="https://www.example6.com">链接6</a></li>
-            <li><a href="https://www.example7.com">链接7</a></li>
-            <li><a href="https://www.example8.com">链接8</a></li>
-        </ul>
-    </section>
-</main>
-
-<footer>
-    <p>版权所有 &copy; 2023 我的网站</p>
-</footer>
+<!-- 创建水平分类列表 -->
+<ul class="horizontal-list">
+    <li><a href="https://www.example1.com">分类1</a></li>
+    <li><a href="https://www.example2.com">分类2</a></li>
+    <li><a href="https://www.example3.com">分类3</a></li>
+    <!-- 可以继续添加更多分类 -->
+</ul>
 
 </body>
 </html>
