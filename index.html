@@ -61,6 +61,46 @@
             margin-top: 20px;
         }
     </style>
+     <style>
+        /* 样式化分类标题 */
+        .category-title {
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        /* 样式化横排链接 */
+        .horizontal-links {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+
+        .horizontal-links a {
+            text-decoration: none;
+            padding: 5px;
+            border: 1px solid #ccc;
+            margin-right: 10px;
+        }
+
+        /* 最后一个链接不需要右边距 */
+        .horizontal-links a:last-child {
+            margin-right: 0;
+        }
+
+        /* 样式化竖排链接 */
+        .vertical-links {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .vertical-links li {
+            margin-bottom: 10px;
+        }
+
+        .vertical-links a {
+            text-decoration: none;
+        }
+    </style>
 </head>
 <body>
     <div class="container">
