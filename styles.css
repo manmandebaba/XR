@@ -1,54 +1,63 @@
-/* 基本的样式重置 */
-*, *::before, *::after {
-    box-sizing: border-box;
+/* 基础样式 */
+body {
+    font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
 }
 
-body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-}
-
-/* 头部样式 */
 header {
     background-color: #333;
-    color: white;
-    padding: 20px;
-    text-align: center;
-}
-
-header h1 {
-    margin-bottom: 0;
-}
-
-/* 导航样式 */
-nav ul {
-    list-style-type: none;
-    display: flex;
-    justify-content: center;
-    margin-top: 10px;
-}
-
-nav ul li {
-    margin: 0 10px;
-}
-
-nav ul li a {
-    color: white;
-    text-decoration: none;
-    padding: 5px;
-}
-
-/* 页脚样式 */
-footer {
-    background-color: #333;
-    color: white;
-    text-align: center;
+    color: #fff;
     padding: 10px;
-    position: relative;
-    bottom: 0;
-    width: 100%;
 }
 
-/* 其他样式，根据需要添加 */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 50px;
+}
+
+.nav-brand {
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    padding: 0;
+}
+
+.nav-links a {
+    color: #fff;
+    padding: 0 10px;
+    text-decoration: none;
+}
+
+.nav-links a:hover {
+    color: #f00;
+}
+
+.nav-toggle {
+    display: none;
+    cursor: pointer;
+}
+
+/* 响应式样式 */
+@media screen and (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    .nav-toggle {
+        display: block;
+    }
+
+    .nav-active {
+        display: flex;
+    }
+}
