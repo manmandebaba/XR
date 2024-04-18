@@ -10,51 +10,38 @@ body {
     line-height: 1.6;
 }
 
-/* 头部样式 */
-header {
+/* 导航栏样式 */
+nav {
     background-color: #f8f9fa;
-    padding: 20px;
+    padding: 10px;
     text-align: center;
 }
 
-h1 {
-    margin-bottom: 10px;
-}
-
-/* 导航样式 */
 nav ul {
     list-style-type: none;
     display: flex;
     justify-content: center;
-    margin-bottom: 20px;
 }
 
 nav ul li {
+    display: inline-block;
     margin: 0 10px;
 }
 
-nav ul li a {
-    color: #333;
+nav ul li a.category-link {
+    display: inline-block;
+    padding: 5px 10px;
     text-decoration: none;
-    padding: 5px;
+    color: #fff;
 }
 
-/* 主要内容样式 */
+/* 主内容样式 */
 main {
     padding: 20px;
 }
 
-section {
+section.category-section {
     margin-bottom: 30px;
-}
-
-h2 {
-    color: #333;
-}
-
-ul {
-    list-style-type: none;
-    padding-left: 0;
 }
 
 /* 页脚样式 */
