@@ -1,63 +1,79 @@
-/* 基础样式 */
-body {
-    font-family: 'Arial', sans-serif;
+/* 基本样式重置 */
+*, *::before, *::after {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+/* 头部样式 */
 header {
-    background-color: #333;
-    color: #fff;
-    padding: 10px;
+    background-color: #f8f9fa;
+    padding: 20px;
+    text-align: center;
 }
 
-nav {
+h1 {
+    margin-bottom: 10px;
+}
+
+/* 导航样式 */
+nav ul {
+    list-style-type: none;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 50px;
+    justify-content: center;
+    margin-bottom: 20px;
 }
 
-.nav-brand {
-    font-weight: bold;
-    font-size: 1.2em;
+nav ul li {
+    margin: 0 10px;
 }
 
-.nav-links {
-    display: flex;
-    list-style: none;
-    padding: 0;
-}
-
-.nav-links a {
-    color: #fff;
-    padding: 0 10px;
+nav ul li a {
+    color: #333;
     text-decoration: none;
+    padding: 5px;
 }
 
-.nav-links a:hover {
-    color: #f00;
+/* 主要内容样式 */
+main {
+    padding: 20px;
 }
 
-.nav-toggle {
-    display: none;
-    cursor: pointer;
+section {
+    margin-bottom: 30px;
 }
 
-/* 响应式样式 */
-@media screen and (max-width: 768px) {
-    .nav-links {
-        display: none;
+h2 {
+    color: #333;
+}
+
+ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+/* 页脚样式 */
+footer {
+    background-color: #f8f9fa;
+    text-align: center;
+    padding: 10px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+/* 响应式布局 */
+@media (max-width: 600px) {
+    nav ul {
         flex-direction: column;
-        align-items: center;
-        width: 100%;
     }
 
-    .nav-toggle {
-        display: block;
-    }
-
-    .nav-active {
-        display: flex;
+    nav ul li {
+        margin: 10px 0;
     }
 }
