@@ -3,9 +3,8 @@ body, ul, li, h1, h2, h3, h4, h5, h6, p, form, dl, dt, dd { margin: 0px; padding
 img { border-style: none;}
 li{ list-style: none; float: left}
 a{ text-decoration: none}
-<!-- 注意！下方引用的是存储在网络，而非项目文件夹内的背景图片文件 -->
 body {	
-	background-image: url(../img/01.jpg);
+    background-image: url(../img/01.jpg);
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-attachment: fixed;
@@ -397,18 +396,161 @@ body, ul, li, h1, h2, h3, h4, h5, h6, p, form, dl, dt, dd {
     z-index: 1;
 }
 
+/*zdy*/
+.zdy_button img {
+    width: 36px;
+    float: right;
+    margin: 10px 30px;
+    cursor: pointer;
+}
+.zdy{
+    width: 100%;
+    margin: auto;
+    height: 100%;
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    background: rgb(0,0,0,0.6);
+    overflow: auto;
+    display: none;
+    z-index: 6;
+}
+.zdy_content{
+    background: white;
+    width: 600px;
+    
+    margin: auto;
+    margin-top: 50px;
+    border-radius: 5px;
+    padding: 20px 0px;
+    font-size: 23px;
+}
+span.zdy_edit {
+	/*url(img/edit.ico)*/
+    background: url(../img/edit.ico);
+    background-size: 20px 20px;
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    margin-right: 10px;
+}
+span.zdy_close {
+	float: right;
+    background: url(../img/close.jpg);
+    background-size: 20px 20px;
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    margin-right: 10px;
+    cursor: pointer;
+}
+.zdy_close:hover,.zdy_b:hover{
+	opacity: 0.7;
+}
+.zdy_top {
+    border-bottom: 1px solid #d2d2d2;
+    padding: 0 20px 20px;
+    margin-bottom: 10px;
+}
+.zdy_b {
+    width: 100px;
+    height: 45px;
+    border: 0px;
+    border-radius: 5px;
+    color: white;
+    text-align: center;
+    line-height: 44px;
+    display: inline-block;
+    cursor: pointer;
+}
+.zdy_false {
+    background-color: #d2d2d2;
+    margin-left: 155px;
+    margin-right: 90px;
+}
+.zdy_true{
+	background-color: #0271CD;
+}
+.zdy_foot {
+    padding: 20px 0 0;
+    border-top: 1px solid #d2d2d2;
+    margin-top: 20px;
+}
 .z_m_i {
     padding: 10px 20px 0;
     box-sizing: border-box;
     position: relative;
 }
-
+span.z_i_img_1 {
+    background: url(../img/a.jpg) no-repeat;
+    display: inline-block;
+    width: 20px;
+    background-size: 18px;
+    height: 20px;
+    position: absolute;
+    top: 24px;
+    left: 25px;
+}
+span.z_i_img_2 {
+    background: url(../img/link.jpg) no-repeat;
+    display: inline-block;
+    width: 20px;
+    background-size: 18px;
+    height: 20px;
+    position: absolute;
+    top: 24px;
+    left: 25px;
+}
+input.zdy_input {
+    background: white;
+    width: 100%;
+    margin: auto;
+    border-radius: 5px;
+    padding: 8px 30px;
+    box-sizing: border-box;
+}
 .jj-list-con li{
 	position: relative;
 	height: 42px;
 }
-
+.i_r_remove {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    line-height: 42px;
+    background-color: red;
+    color: #fff;
+    display: none; 
+    cursor: pointer;
+    background: url(../img/close.jpg) red;
+    background-size: 20px 20px;
+}
+.i_r_remove:hover{
+	background-color: #fc0b0b;
+}
 .jj-list-con li:hover .i_r_remove{
 	display: block;
 }
 
+.i_r_edit {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    line-height: 42px;
+    color: #fff;
+    display: none; 
+    cursor: pointer;
+    background: url(../img/edit.ico) #d2d2d2;
+    background-size: 20px 20px;
+}
+
+.zdy_button {
+    position: absolute;
+    right: 0;
+}
