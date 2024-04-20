@@ -7,7 +7,7 @@
 		height: 100%;
 		width: 100%;
 	}
-	/*内容样式，使用flex布局*/
+	/*��絎号�桁�鐚�篏睡��flex絽�絮�*/
 	.content{
 		width: 15rem;
 		display: flex;
@@ -18,7 +18,7 @@
   		position: absolute;
   		top:26%;
 }
-	/*搜索框总体样式*/
+	/*��膣∽��私��桁�*/
 	.baidu{
 		position: relative;
 		width: 14rem;
@@ -31,7 +31,7 @@
 		height: 2.6rem;
 	}
 
-/*取消多级搜索，只保留百度*/
+/*��羔�紊�膾ф��膣��������上墾*/
 	#Select-2{
 		position: absolute;
 		left: 0;
@@ -47,7 +47,7 @@
 		display: none;
 		float: none;
 	}
-	/*输入框样式*/
+	/*莨��ユ��桁�*/
 	#kw-2{
 		width: 10rem;
 		height: 1.2rem;
@@ -55,7 +55,7 @@
 		position: absolute;
 		padding-left: 10px;
 	}
-	/*搜索框样式*/
+	/*��膣∽��桁�*/
 	#su-2 {
 	    width: 3rem;
 	    text-align: center;
@@ -76,19 +76,19 @@
 		box-shadow: none;	
 	}
 	
-	/*content下的所有div宽度*/
+	/*content筝�������div絎遵墾*/
 	.content div{
 		width: 100%;
 	}
-	/*每个选择框的宽度*/
+	/*罸鋇��������絎遵墾*/
 	.content li{
 		width: 4.69rem;
 	}
-	/*放弃content外的footer*/
+	/*�上�content紊���footer*/
 	.footer{  
 		display: none;
 	}
-	/*移动端使用的footer*/
+	/*腱糸���篏睡����footer*/
 	.footer1{
 		display: block;
 		text-align: center;
