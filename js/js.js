@@ -1,3 +1,132 @@
+//cookie
+function setCookie(name, value) {
+	var Days = 360;
+	var exp = new Date();
+	exp.setTime(exp.getTime() + Days * 24 * 60 * 60 * 1000);
+	document.cookie = escape(name) + "=" + escape(value) + ";expires=" + exp.toGMTString();
+}
+function getCookie(name) {
+	var arr, reg = new RegExp("(^| )" + escape(name) + "=([^;]*)(;|$)");
+	if (arr = document.cookie.match(reg))
+		return unescape(arr[2]);
+	else
+		return null;
+}
+function delCookie(name) {
+	var exp = new Date();
+	exp.setTime(exp.getTime() - 1);
+	var cval = getCookie(name);
+	if (cval != null)
+		document.cookie = name + "=" + cval + ";expires=" + exp.toGMTString();
+}
+
+function zyd_show() {
+	/* 显示 */
+	//document.querySelector(".zdy").style.display="block";
+	$(".zdy_name").val("");
+	$(".zdy_link").val("");
+
+	if ($(".zdy_button").attr("data") == "1") {
+		$(".i_r_edit").hide();
+		$(".zdy_button").attr("data", "0");
+	} else {
+		$(".i_r_edit").show();
+		$(".zdy_button").attr("data", "1");
+	}
+}
+function zdy_close() {
+	/* 隐藏 */
+	document.querySelector(".zdy").style.display = "none";
+	$(".i_r_edit").hide();
+}
+//取消
+function zdy_false() {
+	/* 隐藏 */
+	document.querySelector(".zdy").style.display = "none";
+	$(".i_r_edit").hide();
+}
+function zyd_edit(index) {
+	/* 显示 */
+	document.querySelector(".zdy").style.display = "block";
+	var that = $($($(".jj-list-con li")[index]).children("a"));
+	$(".zdy_name").val(that.html());
+	$(".zdy_link").val(that.attr("href"));
+	//$(".i_r_edit").show();
+	$(".zdy").attr("date", index);
+}
+
+//确定
+function zdy_true() {
+	$(".i_r_edit").hide();
+	/* 隐藏 */
+	document.querySelector(".zdy").style.display = "none";
+	var name = $(".zdy_name").val();
+	var link = $(".zdy_link").val();
+	var index = $(".zdy").attr("date");
+	//console.log(name,link);
+	setCookie("zdylink_" + index, name + "_fg_" + link);
+	c_init();
+
+}
+
+
+function c_init() {
+	//$(".zdy_li").empty();
+
+	var aCookie = document.cookie.split(";");
+
+	var zdylength = 0;
+	for (var i = 0; i < aCookie.length; i++) {
+		var aCrumb = aCookie[i].split("=");
+		if (aCrumb[0].toString().trim() == 'order_list') {
+			continue;
+		}
+		var name = unescape(aCrumb[0].trim());
+
+		if (aCrumb[0].toString().trim().indexOf("zdylink_") > -1) {
+
+			zdylength = zdylength + 1;
+			var l_l_edit = $(".jj-list-con li")[name.replace("zdylink_", "")];
+			if (l_l_edit) {
+
+				var link = getCookie(name).split("_fg_");
+
+				$($(l_l_edit).children("a")).attr("href", link[1]);
+				$($(l_l_edit).children("a")).html(link[0]);
+			}
+			//$(".zdy_li").append('<li><a href="'+link +'" class="link-3" target="_blank">'+(name.replace("zdylink_",""))+'</a><div class="i_r_remove" onclick="s_r(\''+aCrumb[0]+'\');"></div></li>');
+		}
+
+	}
+	if (zdylength == 0) {
+		//$(".zdy_list").hide();
+	} else {
+		//$(".zdy_list").show();	
+	}
+
+}
+function s_r(key) {
+	delCookie(key.trim());
+	//c_init();
+}
+window.onload = function () {
+	c_init();
+	var list_li = $("._b li");
+	for (var i = list_li.length - 1; i >= 0; i--) {
+		$(list_li[i]).append('<div class="i_r_edit" onclick="zyd_edit(\'' + i + '\');"></div>');
+	}
+
+}
+// 百度统计代码开始，请删除或者修改成自己的
+var _hmt = _hmt || [];
+(function () {
+	var hm = document.createElement("script");
+	hm.src = "https://hm.baidu.com/hm.js?b556d06a5110a1a17fa2ceb5cb8a4acb";
+	var s = document.getElementsByTagName("script")[0];
+	s.parentNode.insertBefore(hm, s);
+})();
+// 百度统计代码结束
+
 $(function () {
 	// $('body').height($('body')[0].clientHeight);
 	initpage();
@@ -124,13 +253,13 @@ $('.Select-box-2 ul').hover(function () {
 $('.Select-box-2 li').click(function () {
 	var _tihs = $(this).attr('class');
 	var _html = $(this).html();
-	var _name = 'wd';
+	var _name = 'q';
 	if (_tihs == 'this_s') {
 		return "";
 	}
-	if (_tihs == 'baidu_s') {
-		_tihs = 'https://www.baidu.com/s';
-		_name = 'wd';
+	if (_tihs == 'ff_s') {
+			_tihs = 'https://fsoufsou.com/search';
+			_name = 'q';
 	} else if (_tihs == 'google_s') {
 		_tihs = 'https://www.google.com/search';
 		_name = 'q';
@@ -138,10 +267,15 @@ $('.Select-box-2 li').click(function () {
 		_tihs = 'https://www.bing.com/search';
 		_name = 'q';
 	} else if (_tihs == 'miji_s') {
-		_tihs = 'https://www.dogedoge.com/results';
+		_tihs = 'https://duckduckgo.com/';
 		_name = 'q';
-	} else {
-		_tihs = 'https://www.baidu.com/s';
+	} else if (_tihs == 'baidu_s') {
+		/*_tihs = 'https://www.baidu.com/s';*/
+		_tihs = 'https://www.jianavi.com/baidu';
+		_name = 'wd';
+	} 
+	else {
+		_tihs = 'https://www.jianavi.com/baidu';
 		_name = 'wd';
 	}
 	$('.baidu form').attr('action', _tihs);
@@ -220,6 +354,23 @@ function if_btn() {
 
 }
 if_btn();
+
+//首页皮肤选择列表
+$('.pifu-con').hover(function () {
+	$('.iex-zuhti-list').fadeIn(250);
+	$('.pifu-con .link-list-a .fa-angle-down').addClass('fa-rotate-180');
+}, function () {
+	$('.iex-zuhti-list').fadeOut(0);
+	$('.pifu-con .link-list-a .fa-angle-down').removeClass('fa-rotate-180');
+});
+
+//微信二维码显示和隐藏
+$('.fw-dingwei a').hover(function () {
+	$('.fw-weixing').fadeIn(250);
+}, function () {
+	$('.fw-weixing').fadeOut(0);
+});
+
 
 $('.muban li').click(function () {
 	_index = $(this).index();
@@ -324,7 +475,12 @@ $(document).keydown(function (e) {
 
 });
 
-
-
+/*var newEngine=getCookie("_search_").replace("https://www.baidu.com/s", "https://aomo.net/coe342100/s");
+setCookie("_search_", newEngine);*/
+var newEngine=getCookie("_search_");
+if(newEngine.search('baidu.com/s')!=-1||newEngine.search('/coe342100/s')!=-1){
+	newEngine="百度" + "_nln_" + "https://www.jianavi.com/baidu" + "_nln_" + "wd";
+}
+setCookie("_search_", newEngine);
 
 
