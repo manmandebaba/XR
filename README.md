@@ -1,10 +1,43 @@
-
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>多个标题和内容</title>
-    <style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>可更换搜索引擎的搜索框</title>
+<style>
+  .search-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    overflow: hidden;
+    max-width: 400px;
+    margin: 20px auto;
+  }
+
+  .search-input {
+    flex: 1;
+    padding: 10px;
+    border: none;
+    outline: none;
+  }
+
+  .search-select {
+    padding: 10px;
+    border: none;
+    outline: none;
+    background-color: #f1f1f1;
+    cursor: pointer;
+  }
+
+  .search-button {
+    padding: 10px 15px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+
         /* 可选样式 */
         .content-item {
             margin-bottom: 20px; /* 每个内容项之间的间距 */
@@ -24,80 +57,33 @@
             text-decoration: none; /* 移除链接的下划线 */
             color: black; /* 链接颜色 */
         }
-        {
-    font-family: Arial, sans-serif;
-    margin: 20px;
-  }
-  
-  .search-container {
-    position: relative;
-    max-width: 400px;
-    margin: 0 auto;
-  }
-  
-  .search-input {
-    width: 100%;
-    padding: 10px;
-    font-size: 16px;
-    border: 1px solid #ccc;
-  }
-  
-  .search-select {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-  }
-  
-  .search-link {
-    display: block;
-    margin-top: 10px;
-    font-size: 16px;
-  }
-    </style>
+</style>
 </head>
 <body>
+
 <div class="search-container">
-  <input type="text" id="searchInput" class="search-input" placeholder="输入搜索关键词...">
+
   <select id="searchEngine" class="search-select">
-    <option value="https://www.google.com/search?q=">Google</option>
+    <option value="https://www.baidu.com/s?wd=">百度</option>
     <option value="https://www.bing.com/search?q=">Bing</option>
     <option value="https://duckduckgo.com/?q=">DuckDuckGo</option>
-    <!-- 添加更多搜索引擎选项 -->
+    <!-- 可以添加更多搜索引擎选项 -->
   </select>
-  <a id="searchLink" class="search-link" href="#" target="_blank">搜索</a>
+  <input type="text" id="searchInput" class="search-input" placeholder="输入搜索关键词...">
+  <button id="searchButton" class="search-button">搜索</button>
 </div>
 
 <script>
-  document.getElementById('searchInput').addEventListener('input', function() {
-    var query = this.value;
-    var engineUrl = document.getElementById('searchEngine').value;
-    var searchLink = document.getElementById('searchLink');
-    
-    if (query) {
-      searchLink.href = engineUrl + encodeURIComponent(query);
-      searchLink.textContent = '在 ' + document.getElementById('searchEngine').options[document.getElementById('searchEngine').selectedIndex].text + ' 搜索 "' + query + '"';
-    } else {
-      searchLink.href = '#';
-      searchLink.textContent = '搜索';
-    }
-  });
-  
-  document.getElementById('searchEngine').addEventListener('change', function() {
-    // 当搜索引擎更改时，重新生成搜索链接
+  document.getElementById('searchButton').addEventListener('click', function() {
     var query = document.getElementById('searchInput').value;
-    var engineUrl = this.value;
-    var searchLink = document.getElementById('searchLink');
+    var engineUrl = document.getElementById('searchEngine').value;
     
     if (query) {
-      searchLink.href = engineUrl + encodeURIComponent(query);
-      searchLink.textContent = '在 ' + this.options[this.selectedIndex].text + ' 搜索 "' + query + '"';
-    } else {
-      searchLink.href = '#';
-      searchLink.textContent = '搜索';
+      window.location.href = engineUrl + encodeURIComponent(query);
     }
   });
 </script>
-    
+
     <div class="content-container">
         <!-- 第一个标题和内容 -->
         <div class="content-item">
@@ -127,4 +113,3 @@
         
         <!-- 以此类推，添加更多标题和内容 -->
     </div>
-
