@@ -1,0 +1,109 @@
+@media screen and (max-width:768px) {
+	*{
+		margin:0;padding: 0;
+	}
+
+	html,body{
+		height: 100%;
+		width: 100%;
+	}
+	/*��絎号�桁�鐚�篏睡��flex絽�絮�*/
+	.content{
+		width: 15rem;
+		display: flex;
+  		flex-direction: column;
+ 		justify-content: space-around;
+  		align-items: center;
+  		/*height: 46rem;*/
+  		position: absolute;
+  		top:26%;
+}
+	/*��膣∽��私��桁�*/
+	.baidu{
+		position: relative;
+		width: 14rem;
+		height: 2.6rem;
+		left: 50%;
+		transform: translateX(-50%);
+	}
+
+	.baidu-2{
+		height: 2.6rem;
+	}
+
+/*��羔�紊�膾ф��膣��������上墾*/
+	#Select-2{
+		position: absolute;
+		left: 0;
+	}
+
+	.Select-box-2{
+		display: none;
+		float: none;
+	}
+
+	.Select-box-2  li{
+		background-color: yellow;
+		display: none;
+		float: none;
+	}
+	/*莨��ユ��桁�*/
+	#kw-2{
+		width: 10rem;
+		height: 1.2rem;
+		border:0;
+		position: absolute;
+		padding-left: 10px;
+	}
+	/*��膣∽��桁�*/
+	#su-2 {
+	    width: 3rem;
+	    text-align: center;
+	    line-height: 0rem;
+	    position: absolute;
+	    background-color: blue;
+	    border-color: blue;
+	    right: 1rem;
+	    border-radius: 0;
+	    height: 1.2rem;
+	}
+	#su-2:hover{
+		background-color: blue;
+	}
+
+	#su-2:avtive{
+		background-color: blue;
+		box-shadow: none;	
+	}
+	
+	/*content筝�������div絎遵墾*/
+	.content div{
+		width: 100%;
+	}
+	/*罸鋇��������絎遵墾*/
+	.content li{
+		width: 4.69rem;
+	}
+	/*�上�content紊���footer*/
+	.footer{  
+		display: none;
+	}
+	/*腱糸���篏睡����footer*/
+	.footer1{
+		display: block;
+		text-align: center;
+		position: relative;
+		padding-top: 10px;
+		bottom: 0;
+		color:white;
+	}
+
+	input[type="button"], input[type="submit"], input[type="reset"] {
+
+	-webkit-appearance: none;
+
+	}
+
+	textarea {  -webkit-appearance: none;}  
+	
+}
