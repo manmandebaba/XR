@@ -17,49 +17,16 @@
 	<link rel="shortcut icon" href="favicon.ico">
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<link rel="stylesheet" type="text/css" href="css/yidong.css">
+    <script src="./js/jquery.min.js"></script>
+    <script src="./js/keyword.js"></script>
 	<!-- 本项目开源地址：https://github.com/appexplore/jianavi 请勿完全抄袭源码，请勿声明自己是原创，开源版和运行的版本功能有差异，界面相同 -->
 </head>
 
-
 <body>
-	<!-- 自定义按钮start -->
-	<div class="zdy_button" onclick="zyd_show();">
-		<img src="img/cl.ico">
-	</div>
-	<!-- 自定义按钮end -->
 
-	<!-- 自定义弹窗start -->
-	<div class="zdy">
-		<div class="zdy_content">
-			<div class="zdy_top">
-				<span class="zdy_edit"></span>自定义链接
-				<span class="zdy_close" onclick="zdy_close();"></span>
-			</div>
-			<div class="zdy_mi">
-				<div class="z_m_i">
-					<span class="z_i_img_1"></span>
-					<input type="text" class="zdy_input zdy_name" placeholder="微博">
-				</div>
-				<div class="z_m_i">
-					<span class="z_i_img_2"></span>
-					<input type="text" class="zdy_input zdy_link" placeholder="http://www.weibo.com/">
-				</div>
-				<div>
-					<font size="2" color="gray">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;请注意：数据是临时存储在本地电脑上，数据丢失无法找回</font>
-				</div>
-			</div>
-			<div class="zdy_foot">
-				<div class="zdy_false zdy_b" onclick="zdy_false();">取消</div>
-				<div class="zdy_true zdy_b" onclick="zdy_true();">确定</div>
-			</div>
-		</div>
-	</div>
-	<!-- 自定义弹窗end -->
-
-	<!-- 搜索栏start -->
 	<div class="baidu baidu-2">
 		<!--<form name="f" action="https://www.baidu.com/s" target="_blank"> -->
-			<form name="f" action="https://www.baidu.com/" target="_blank">
+			<form name="f" action="https://www.jianavi.com/baidu" target="_blank">
 			<div class="Select-box-2" id="baidu">
 				<ul>
 					<li class="this_s">百 度</li>
@@ -78,13 +45,71 @@
 		</form>
 		<ul class="keylist"></ul>
 	</div>
-	<!-- 搜索栏end -->
 
-	<!-- 内容start -->
-	<div class="body">
-		<div class="content">
-			<div class="jianjie">
-				<div class="jj-list">
+
+<div class="box">
+          <a href="https://github.com/" class="click" target="_blank" rel="nofollow"></a>
+          <p><img class="icon" src="./img/github.png" /></p>
+          <p class="url">github</p>
+        </div>
+        <div class="box">
+          <a href="file:///H:/%E7%BB%84%E4%BB%B6%E6%8A%A5%E8%A1%A8/%E7%94%BB/%E5%A8%B1%E4%B9%90/%E4%B8%BB%E9%A1%B52/index2.html" class="click" target="_blank" rel="nofollow"></a>
+          <p><img class="icon" src="./img/Windows.png" /></p>
+          <p class="url">网址</p>
+        </div>
+        <div class="box">
+          <a href="https://www.xn--sss604efuw.top/jm/" class="click" target="_blank" rel="nofollow"></a>
+          <p><img class="icon" src="./img/fty.png" /></p>
+          <p class="url">饭太硬</p>
+        </div>
+        <div class="box">
+          <a href="https://greasyfork.org/zh-CN/scripts" class="click" target="_blank" rel="nofollow"></a>
+          <p><img class="icon" src="./img/Greasy Fork.png" /></p>
+          <p class="url">脚本</p>
+        </div>
+        <div class="box">
+          <a href="https://www.bejson.com/" class="click" target="_blank" rel="nofollow"></a>
+          <p><img class="icon" src="./img/BEJSON.png" /></p>
+          <p class="url">格式工具</p>
+        </div>
+        <div class="box">
+          <a href="https://base64.us/" class="click" target="_blank" rel="nofollow"></a>
+          <p><img class="icon" src="./img/Base64.png" /></p>
+          <p class="url">编解码</p>
+        </div>
+        <div class="box">
+          <a href="http://time.deloped.com" class="click" target="_blank" rel="nofollow"></a>
+          <p><img class="icon" src="./img/Timer.png" /></p>
+          <p class="url">时钟</p>
+        </div>
+        <div class="box">
+          <a href="https://v.qq.com/" class="click" target="_blank" rel="nofollow"></a>
+          <p><img class="icon" src="./img/QQ.png" /></p>
+          <p class="url">腾讯视频</p>
+        </div>
+        <div class="box">
+          <a href="https://www.bejson.com/" class="click" target="_blank" rel="nofollow"></a>
+          <p><img class="icon" src="./img/BEJSON.png" /></p>
+          <p class="url">格式工具</p>
+        </div>
+        <div class="box">
+          <a href="https://base64.us/" class="click" target="_blank" rel="nofollow"></a>
+          <p><img class="icon" src="./img/Base64.png" /></p>
+          <p class="url">编解码</p>
+        </div>
+        <div class="box">
+          <a href="http://time.deloped.com" class="click" target="_blank" rel="nofollow"></a>
+          <p><img class="icon" src="./img/Timer.png" /></p>
+          <p class="url">时钟</p>
+        </div>
+        <div class="box">
+          <a href="https://v.qq.com/" class="click" target="_blank" rel="nofollow"></a>
+          <p><img class="icon" src="./img/QQ.png" /></p>
+          <p class="url">腾讯视频</p>
+        </div>	
+
+
+
 					<div class="jj-list-tit">仓库 · 项目</div>
 					<ul class="jj-list-con _b">
 						<li><a href="https://github.com/" class="link-3" target="_blank" rel="nofollow">github项目</a></li>
@@ -108,10 +133,11 @@
 						<li><a href="https://convertio.co/zh/" class="link-3" target="_blank" rel="nofollow">格式转换</a></li>
 						<li><a href="https://weibomiaopai.com/" class="link-3" target="_blank" rel="nofollow">视频下载</a></li>
 						<li><a href="https://daga.cc/yue/" class="link-3" target="_blank" rel="nofollow">音乐下载</a></li>
+				</ul>
 				</div>
 
 
-				<div class="jj-list">
+		
 					<div class="jj-list-tit">搜索 · 资源</div>
 					<ul class="jj-list-con _b">
 						<li><a href="http://bbs.qiqiv.cn/" class="link-3" target="_blank" rel="nofollow">奇奇分享网</a></li>
@@ -130,7 +156,6 @@
 					</ul>
 				</div>
 
-				<div class="jj-list">
 					<div class="jj-list-tit">影音 · 娱乐</div>
 					<ul class="jj-list-con _b">
 						<li><a href="https://www.iqiyi.com/" class="link-3" target="_blank" rel="nofollow">爱奇艺</a></li>
@@ -148,17 +173,6 @@
 				</div>
 
 
-
-				<!-- 自定义按钮start -->
-				<div class="jj-list zdy_list" style="display: none;">
-					<div class="jj-list-tit">自定义</div>
-					<ul class="jj-list-con zdy_li">
-					</ul>
-				</div>
-				<!-- 自定义按钮end -->
-</div>
-			
-			
 			<!-- 底部版权start -->
 			<!-- 开源不易，请勿去除下方版权信息 -->
 			<!-- 如果您想修改下方版权信息，请打赏并留言您的网址 >> https://afdian.net/@appts -->
