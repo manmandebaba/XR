@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -45,7 +45,7 @@
 
         </div>
             </ul>
-        </div>
+
         
         <!-- 第二个标题和内容 -->
         <div class="content-item">
