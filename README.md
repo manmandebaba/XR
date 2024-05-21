@@ -24,9 +24,80 @@
             text-decoration: none; /* 移除链接的下划线 */
             color: black; /* 链接颜色 */
         }
+        {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+  }
+  
+  .search-container {
+    position: relative;
+    max-width: 400px;
+    margin: 0 auto;
+  }
+  
+  .search-input {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+  }
+  
+  .search-select {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+  }
+  
+  .search-link {
+    display: block;
+    margin-top: 10px;
+    font-size: 16px;
+  }
     </style>
 </head>
 <body>
+<div class="search-container">
+  <input type="text" id="searchInput" class="search-input" placeholder="输入搜索关键词...">
+  <select id="searchEngine" class="search-select">
+    <option value="https://www.google.com/search?q=">Google</option>
+    <option value="https://www.bing.com/search?q=">Bing</option>
+    <option value="https://duckduckgo.com/?q=">DuckDuckGo</option>
+    <!-- 添加更多搜索引擎选项 -->
+  </select>
+  <a id="searchLink" class="search-link" href="#" target="_blank">搜索</a>
+</div>
+
+<script>
+  document.getElementById('searchInput').addEventListener('input', function() {
+    var query = this.value;
+    var engineUrl = document.getElementById('searchEngine').value;
+    var searchLink = document.getElementById('searchLink');
+    
+    if (query) {
+      searchLink.href = engineUrl + encodeURIComponent(query);
+      searchLink.textContent = '在 ' + document.getElementById('searchEngine').options[document.getElementById('searchEngine').selectedIndex].text + ' 搜索 "' + query + '"';
+    } else {
+      searchLink.href = '#';
+      searchLink.textContent = '搜索';
+    }
+  });
+  
+  document.getElementById('searchEngine').addEventListener('change', function() {
+    // 当搜索引擎更改时，重新生成搜索链接
+    var query = document.getElementById('searchInput').value;
+    var engineUrl = this.value;
+    var searchLink = document.getElementById('searchLink');
+    
+    if (query) {
+      searchLink.href = engineUrl + encodeURIComponent(query);
+      searchLink.textContent = '在 ' + this.options[this.selectedIndex].text + ' 搜索 "' + query + '"';
+    } else {
+      searchLink.href = '#';
+      searchLink.textContent = '搜索';
+    }
+  });
+</script>
+    
     <div class="content-container">
         <!-- 第一个标题和内容 -->
         <div class="content-item">
