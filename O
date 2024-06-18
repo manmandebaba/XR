@@ -1,11 +1,11 @@
 {
-"spider": "./spider.jar",
+"spider": "https://manmandebaba.github.io/XR/spider.jar",
 	"sites":[
-{"key":"q腾","name":"腾讯","type":3,"playerType":2,"api":"./drpy/lib/api.js","ext":"./drpy/js/qq腾讯.js"},
-{"key":"无果","name":"芒果","type":3,"playerType":2,"api":"./drpy/lib/api.js","ext":"./drpy/js/百忙无果.js"},
-{"key":"奇珍","name":"爱奇艺","type":3,"playerType":2,"api":"./drpy/lib/api.js","ext":"./drpy/js/奇珍异兽.js"},
-{"key":"菜狗","name":"搜狗","type":3,"playerType":2,"api":"./drpy/lib/api.js","ext":"./drpy/js/菜狗.js"},
-{"key":"很酷","name":"优酷","type":3,"playerType":2,"api":"./drpy/lib/api.js","ext":"./drpy/js/优酷.js"},
+{"key":"q腾","name":"腾讯","type":3,"playerType":2,"api":"https://manmandebaba.github.io/XR/drpy/lib/api.js","ext":"https://manmandebaba.github.io/XR/drpy/js/qq腾讯.js"},
+{"key":"无果","name":"芒果","type":3,"playerType":2,"api":"https://manmandebaba.github.io/XR/drpy/lib/api.js","ext":"https://manmandebaba.github.io/XR/drpy/js/百忙无果.js"},
+{"key":"奇珍","name":"爱奇艺","type":3,"playerType":2,"api":"https://manmandebaba.github.io/XR/drpy/lib/api.js","ext":"https://manmandebaba.github.io/XR/drpy/js/奇珍异兽.js"},
+{"key":"菜狗","name":"搜狗","type":3,"playerType":2,"api":"https://manmandebaba.github.io/XR/drpy/lib/api.js","ext":"https://manmandebaba.github.io/XR/drpy/js/菜狗.js"},
+{"key":"很酷","name":"优酷","type":3,"playerType":2,"api":"https://manmandebaba.github.io/XR/drpy/lib/api.js","ext":"https://manmandebaba.github.io/XR/drpy/js/优酷.js"},
 {"key":"行人资源","name":"行人资源","type":1,"api":"https://360zy.com/api.php/provide/vod","categories":["国产剧","短片","动画片","香港剧","韩国剧","欧美剧","动作片","喜剧片","爱情片","科幻片","恐怖片","剧情片","战争片","NBA","惊悚片","家庭篇","古装片","历史片","悬疑片","犯罪片","纪录片","台湾剧","大陆综艺","国产动漫","日韩动漫","西部片"]},
 {"key":"飞刀资源","name":"飞刀资源","type":1,"api":"http://www.feidaozy.com/api.php/provide/vod","categories":["国产剧","港剧","台剧","日剧","韩剧","欧美剧","泰剧","新马剧","其他剧","网络电影","冒险片","剧情片","动作片","动画电影","喜剧片","奇幻片","恐怖片","悬疑片","惊悚片","战争片","歌舞片","灾难片","爱情片","犯罪片","科幻片","经典片","欧美综艺","日本综艺","韩国综艺","国产综艺","新马泰综艺","港台综艺","其他综艺","欧美动漫","日本动漫","韩国动漫","国产动漫","新马泰动漫","港台动漫","其他动漫","纪录片","电影","电视剧","综艺","动漫"]},
 {"key":"泡泡资源","name":"泡泡资源","type":1,"api":"https://api.zeqaht.com/api.php/provide/vod/","categories":["国产剧","网络短剧","港台剧","欧美剧","动作","喜剧","爱情","科幻","恐怖","剧情","战争","犯罪"]},
