@@ -1,5 +1,5 @@
 {
-"spider": "https://manmandebaba.github.io/XR/spider.jar",
+"spider": "https://manmandebaba.github.io/XR/lengri.jar",
 	"sites":[
 {"key":"q腾","name":"腾讯","type":3,"playerType":2,"api":"https://manmandebaba.github.io/XR/drpy/lib/api.js","ext":"https://manmandebaba.github.io/XR/drpy/js/qq腾讯.js"},
 {"key":"无果","name":"芒果","type":3,"playerType":2,"api":"https://manmandebaba.github.io/XR/drpy/lib/api.js","ext":"https://manmandebaba.github.io/XR/drpy/js/百忙无果.js"},
