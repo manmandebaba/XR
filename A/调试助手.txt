@@ -1,12 +1,12 @@
 ﻿
 {"Home": [
-{"key":"APP","title":"APP","pic":"https://manmandebaba.github.io/XR/ts/04/xiqu.png"},
-{"key":"采集","title":"采集","pic":"https://manmandebaba.github.io/XR/ts/04/dianbo1.png"},
-{"key":"网页","title":"影视","pic":"https://manmandebaba.github.io/XR/ts/04/dianbo2.png"},
-{"key":"直播","title":"直播","pic":"https://manmandebaba.github.io/XR/ts/04/tv.png"},
-{"key":"历史","title":"历史","pic":"https://manmandebaba.github.io/XR/ts/04/lishi.png"},
-{"key":"收藏","title":"收藏","pic":"https://manmandebaba.github.io/XR/ts/04/sc.png"},
-{"key":"推送","title":"推送","pic":"https://manmandebaba.github.io/XR/ts/04/ts.png"}
+{"key":"APP","title":"APP","pic":"https://manmandebaba.github.io/XR/A/ts/04/xiqu.png"},
+{"key":"采集","title":"采集","pic":"https://manmandebaba.github.io/XR/A/ts/04/dianbo1.png"},
+{"key":"网页","title":"影视","pic":"https://manmandebaba.github.io/XR/A/ts/04/dianbo2.png"},
+{"key":"直播","title":"直播","pic":"https://manmandebaba.github.io/XR/A/ts/04/tv.png"},
+{"key":"历史","title":"历史","pic":"https://manmandebaba.github.io/XR/A/ts/04/lishi.png"},
+{"key":"收藏","title":"收藏","pic":"https://manmandebaba.github.io/XR/A/ts/04/sc.png"},
+{"key":"推送","title":"推送","pic":"https://manmandebaba.github.io/XR/A/ts/04/ts.png"}
 ],
 
 "去广告规则": [
