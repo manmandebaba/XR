@@ -1,3 +1,4 @@
+http://530.my3v.work/f.json
 一、资源搜索
 
 1、小白盘（让你的云端存储更便捷，提供高效的云存储解决方案）：https://www.xiaobaipan.com
